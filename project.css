@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+} /**universal selector: will be applicable for all the html elements**/
+
+.toprow
+{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display:flex;
+    padding:2% 6%;  /**vertical-horizontal**/
+    justify-content: space-between;
+    align-items: center;
+}/**to move the navigation bar from left to right**/
+
+nav img{
+    width:90px;
+
+}/**for logo**/
+
+.menubar{
+    flex:1; /**will occupy all the space in the row**/
+    text-align: right; /**to place the navigation bar horizontally at right side**/
+}
+
+.menubar ul li{
+    display: inline-block; /**will come horizontly**/
+    padding: 8px 12px; /**to add space**/
+    position: relative;
+}/**final step to create menu bar**/
+
+.menubar ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 13px;    
+}/**to add color **/
+
+.menubar ul li::after{   /** to add content after the text**/
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: lawngreen;
+    display: block;
+    margin: auto;  
+    transition: 0.5s;
+}/**to add hover effeft**/
+
+.menubar ul li:hover::after{
+    width: 100%;
+}/**to show hover effect**/
+
+.uniname{
+    width:90%;
+    color: white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);/**
+    move me leftwards by 50% of my width, along the x-axis, and
+    move me upwards by 50% of my height, along the y-axis
+    to align it at the center position**/
+    text-align: center;
+}
+
+.uniname h1{
+    font-size: 65px;
+}/**font size of the center headline**/
+
+.uniname p{
+    margin: 12px 0 40px;/**10px from top 0 from left&right and 40px from bottom**/
+    color: white;
+    font-size: 18px; /**font for the center inner text**/
+}
+
+.button{
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    border:1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}/** to design visit us to know more button**/
+
+.button:hover{
+    border:1px solid red;
+    background: red ;
+    transition: 1s;
+}/**to add hover effect when mouse cursor is on the button**/
+
+/**------------------------------course-------------------------------------**/
+
+.course{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: black ;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.coursecolm{
+    flex-basis: 31%;
+    background: rgb(197, 230, 165);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding:20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+   text-align: center;
+   font-weight: 600;
+   margin: 10px 0; 
+}
+
+.coursecolm:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/*-----------------------------------campus-------------------------------------------*/
+
+.campus{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campuscolm{
+    flex-basis: 32% ;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campuscolm img{
+    width:100%
+}
+
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(210, 241, 220, 0.1);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
